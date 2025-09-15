@@ -242,8 +242,8 @@ const GameCanvas: React.FC = () => {
       if (willHitEdge) {
         currentDirection = currentDirection === 'right' ? 'left' : 'right';
         enemyMoveDirection.current = currentDirection;
-        // Increase speed by 75% when hitting the edge
-        currentEnemySpeedMultiplier = Math.min(currentEnemySpeedMultiplier * 1.75, 5); // Changed from 1.5 to 1.75
+        // Increase speed by 100% when hitting the edge
+        currentEnemySpeedMultiplier = Math.min(currentEnemySpeedMultiplier * 2, 5); // Changed from 1.75 to 2 (100% increase)
         currentEnemies = currentEnemies.map((enemy) => ({
           ...enemy,
           y: enemy.y + ENEMY_DROP_AMOUNT,
